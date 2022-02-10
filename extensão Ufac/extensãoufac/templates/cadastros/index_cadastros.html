@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+    {% block titulo %}
+    <title>cadastros</title>
+    {% endblock %}
+
+
+                {% load crispy_forms_tags %}
+
+                    {% block conteudo %}
+
+                        <h1 class="h3 mb-4 test-gray-800">cadastros</h1>
+
+                        <form method="POST" action="">
+                            {% csrf_token %}
+                            {{form | crispy}}
+                            <div class="text-right">
+                                <button type="submit" class="save btn btn-success">salvar</button>
+                            </div>
+                        </form>
+                    {% endblock %} 

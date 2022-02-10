@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+
+    {% block titulo %}
+    <title>Teste Index</title>
+    {% endblock %}
+
+
+                    {% block conteudo %}
+
+                         <h1 class="h3 mb-4 text-gray-800">CADASTROS 2022</h1>
+                         <h1 class="h3 mb-4 text-gray-800">Listagem de Cadastros</h1>
+
+                         <hr>
+
+                         {% for item in object_list %}
+
+                            {{ item.nome }} - {{ item.email }}<br>
+
+                        {% empty %}
+
+                            Nada foi registrado
+
+                        {% endfor %}
+                    
+                    {% endblock %}
